@@ -14,6 +14,7 @@
 
           <!-- Custom styles for this template -->
           <link href="{{ asset('css/resume.min.css') }}" rel="stylesheet">
+          <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         {% endblock %}
     </head>
     <body>
@@ -22,9 +23,9 @@
         {% endblock %}
         {% block javascripts %}
             <!-- Bootstrap core JavaScript -->
-          <script src="/vendor/jquery/jquery.min.js"></script>
-            <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+          <script src="{{ asset('js/jquery.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+          <script src="https://kit.fontawesome.com/89e753fb7b.js" crossorigin="anonymous"></script>
             <!-- Plugin JavaScript -->
             <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
