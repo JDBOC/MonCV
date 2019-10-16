@@ -1,0 +1,267 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ */
+class User
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $firstname;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $age;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $picture;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Formations", mappedBy="user")
+     */
+    private $formations;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Experiences", mappedBy="user")
+     */
+    private $experiences;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Coordonates", mappedBy="user")
+     */
+    private $coordonates;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Competences", mappedBy="user")
+     */
+    private $competences;
+
+
+  public function getFullName() {
+    return "{$this->firstname} {$this->lastname}";
+  }
+
+    public function __construct()
+    {
+        $this->formations = new ArrayCollection();
+        $this->experiences = new ArrayCollection();
+        $this->coordonates = new ArrayCollection();
+        $this->competences = new ArrayCollection();
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getAge(): ?int
+    {
+        return $this->age;
+    }
+
+    public function setAge(int $age): self
+    {
+        $this->age = $age;
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Formations[]
+     */
+    public function getFormations(): Collection
+    {
+        return $this->formations;
+    }
+
+    public function addFormation(Formations $formation): self
+    {
+        if (!$this->formations->contains($formation)) {
+            $this->formations[] = $formation;
+            $formation->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFormation(Formations $formation): self
+    {
+        if ($this->formations->contains($formation)) {
+            $this->formations->removeElement($formation);
+            // set the owning side to null (unless already changed)
+            if ($formation->getUser() === $this) {
+                $formation->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Experiences[]
+     */
+    public function getExperiences(): Collection
+    {
+        return $this->experiences;
+    }
+
+    public function addExperience(Experiences $experience): self
+    {
+        if (!$this->experiences->contains($experience)) {
+            $this->experiences[] = $experience;
+            $experience->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeExperience(Experiences $experience): self
+    {
+        if ($this->experiences->contains($experience)) {
+            $this->experiences->removeElement($experience);
+            // set the owning side to null (unless already changed)
+            if ($experience->getUser() === $this) {
+                $experience->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Coordonates[]
+     */
+    public function getCoordonates(): Collection
+    {
+        return $this->coordonates;
+    }
+
+    public function addCoordonate(Coordonates $coordonate): self
+    {
+        if (!$this->coordonates->contains($coordonate)) {
+            $this->coordonates[] = $coordonate;
+            $coordonate->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCoordonate(Coordonates $coordonate): self
+    {
+        if ($this->coordonates->contains($coordonate)) {
+            $this->coordonates->removeElement($coordonate);
+            // set the owning side to null (unless already changed)
+            if ($coordonate->getUser() === $this) {
+                $coordonate->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Competences[]
+     */
+    public function getCompetences(): Collection
+    {
+        return $this->competences;
+    }
+
+    public function addCompetence(Competences $competence): self
+    {
+        if (!$this->competences->contains($competence)) {
+            $this->competences[] = $competence;
+            $competence->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCompetence(Competences $competence): self
+    {
+        if ($this->competences->contains($competence)) {
+            $this->competences->removeElement($competence);
+            // set the owning side to null (unless already changed)
+            if ($competence->getUser() === $this) {
+                $competence->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+}
