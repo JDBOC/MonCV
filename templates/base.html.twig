@@ -18,7 +18,19 @@
         {% endblock %}
     </head>
     <body>
+
+{% for label, messages in app.flashes %}
+<div class="container">
+  <div class="card alert-success align-items-center">
+    {% for message in messages %}
+<p>{{ message }}</p>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
         {% block body %}
+
+
 
         {% endblock %}
         {% block javascripts %}

@@ -1,19 +1,11 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}New Experiences{% endblock %}
+
 {% block body %}
-  <div class="container">
-    <h3>création d'une nouvelle expèrience</h3>
+    <h1>Create new Experiences</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
+    {{ include('experiences/_form.html.twig') }}
 
-    {{ form_end(form) }}
-
-
-  </div>
+    <a href="{{ path('experiences_index') }}">back to list</a>
 {% endblock %}
-
-{% block title %}
-  nouvelle expèrience
-{% endblock %}
-
