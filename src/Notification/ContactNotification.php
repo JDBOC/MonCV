@@ -25,7 +25,7 @@
       $this->renderer = $renderer;
     }
 
-    public function notify(contact $contact):void
+    public function notify(contact $contact)
     {
 
       $message = (new \Swift_Message( 'Nouveau message' ))
