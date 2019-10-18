@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <div class="section" id="contact">
+    <div class="cc-contact-information py-5 px-5" style="background-image: url('/public/assets/images/webdevback.jpg');">
+      <div class="container">
+        <div class="cc-contact">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="card mb-0 bg-light" data-aos="zoom-in">
+                <div class="h4 text-center title">Contact</div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <form action="" method="POST">
+                        <div class="p pb-3"><strong></strong></div>
+                        {{ form_start(formContact) }}
+                        <div class="row mb-3">
+                          <div class="col">
+                            {{ form_row (formContact.firstname, {'label': 'Prénom'}) }}
+
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            {{ form_row (formContact.lastname, {'label': 'Nom'}) }}
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            {{ form_row (formContact.phone, {'label': 'téléphone'}) }}
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            {{ form_row (formContact.email, {'label': 'Email'}) }}
+                          </div>
+                        </div>
+
+                        {{ form_row(formContact.message, {'label': 'Message'}) }}
+                        <div class="row py-3">
+                          <div class="col-6">
+                            <button class="btn btn-success align-items-center" type="submit">Envoyer</button>
+                        </div>
+                          <div class="col-6">
+                            <a class="btn btn-primary float-right" href="{{ path('index') }}" data-aos="zoom-in"
+                               data-aos-anchor="data-aos-anchor">Retour</a>
+                          </div>
+                    </div>
+                        {{ form_end(formContact) }}
+
+
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-6 row">
+                    <div class="card-body">
+
+                      <p class="mb-0"><strong>Téléphone</strong></p>
+                      <p class="pb-2">07 69 733 533</p>
+                      <p class="mb-0"><strong>Email</strong></p>
+                      <p>jdboccara@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

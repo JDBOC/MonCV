@@ -42,4 +42,7 @@
         'competences' => $competencesRepository->findAll ()
       ] );
     }
+
+
+
   }
