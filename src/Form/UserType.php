@@ -17,6 +17,8 @@ class UserType extends AbstractType
             ->add('age')
             ->add('title')
             ->add('picture')
+            ->add ('hash')
+          ->add ('email')
         ;
     }
 

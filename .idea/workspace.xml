@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/AppFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ExperiencesType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FormationsType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profil.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CompetencesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FormationsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Formations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Formations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191015112432.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20191015112432.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/competences/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/competences/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/experiences/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/experiences/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/f_formations/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/coordonates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/coordonates/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/experiences/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,21 +150,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/vendor/jquery" />
-      <recent name="$PROJECT_DIR$/vendor" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -199,7 +191,8 @@
       <updated>1571135663740</updated>
       <workItem from="1571135666802" duration="10695000" />
       <workItem from="1571146911750" duration="8331000" />
-      <workItem from="1571298344883" duration="10751000" />
+      <workItem from="1571298344883" duration="13829000" />
+      <workItem from="1571319075874" duration="4644000" />
     </task>
     <servers />
   </component>
@@ -211,7 +204,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

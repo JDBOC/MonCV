@@ -3,9 +3,12 @@
 {% block title %}New Experiences{% endblock %}
 
 {% block body %}
+    <div class="container">
     <h1>Create new Experiences</h1>
 
     {{ include('experiences/_form.html.twig') }}
 
     <a href="{{ path('experiences_index') }}">back to list</a>
+
+    </div>
 {% endblock %}

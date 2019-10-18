@@ -40,7 +40,7 @@ class ExperiencesController extends AbstractController
             $entityManager->persist($experience);
             $entityManager->flush();
 
-            return $this->redirectToRoute('experiences_index');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('experiences/new.html.twig', [
@@ -64,7 +64,7 @@ class ExperiencesController extends AbstractController
      */
     public function edit(Request $request, Experiences $experience): Response
     {
-        $form = $this->createForm(Experiences1Type::class, $experience);
+        $form = $this->createForm(ExperiencesType::class, $experience);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
