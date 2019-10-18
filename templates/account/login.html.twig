@@ -11,6 +11,9 @@
       <div class="col-md-6">
 <div class="bg-light py-3 px-3">
         <h1>Page de connexion</h1>
+  {% if hasError %}
+  <div class="alert alert-danger">Une erreur est survenue, mauvais identifiant et/ou mot de passe</div>
+  {% endif %}
         <form action="{{ path('account_login') }}" method="post">
           <div class="form-group">
             <label for="email">Email</label>

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+  {{ form_start(form) }}
+  {{ form_widget(form) }}
+  <div class="justify-content-end">
+  <button type="submit" class="btn btn-success">Enregistrer</button>
+</div>
+  {{ form_end (form)}}
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block title %}
+Formulaire d'inscription
+{% endblock %}
+
