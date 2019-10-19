@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -69,6 +70,11 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $hash;
+
+  /**
+   * @Assert\EqualTo(propertyPath="hash", message="Vous n'avez pas corretement validé votre mot de passe")
+   */
+  public $confirmPassword;
 
     /**
      * @ORM\Column(type="string", length=255)

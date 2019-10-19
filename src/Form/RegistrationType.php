@@ -18,8 +18,10 @@ class RegistrationType extends AppFormType
             ->add('lastname', TextType::class, $this->getConfig ("Nom", "Indiquez ici votre nom"))
             ->add('firstname', TextType::class, $this->getConfig ("Prénom", "Indiquez ici votre prénom"))
 
+            ->add('title', TextType::class, $this->getConfig ("Titre", "indiquez ici votre poste"))
 
             ->add('hash', PasswordType::class, $this->getConfig ("Mot de passe", "Indiquez votre mot de passe"))
+          ->add ('confirmPassword', PasswordType::class, $this->getConfig ("Confirmation", "Veuillez confirmer votre mot de passe"))
             ->add('email', EmailType::class, $this->getConfig ("Email", "Votre adresse email"))
         ;
     }
