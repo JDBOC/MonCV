@@ -22,7 +22,9 @@
 
 {% for label, messages in app.flashes %}
 <div class="container">
-  <div class="card alert-success align-items-center">
+
+
+  <div class="card alert-success align-items-center mt-5">
     {% for message in messages %}
 <p>{{ message }}</p>
     {% endfor %}
