@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Experiences;
-use App\Form\Experiences1Type;
+
 use App\Form\ExperiencesType;
 use App\Repository\ExperiencesRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,6 +30,7 @@ class ExperiencesController extends AbstractController
 
     /**
      * @Route("/new", name="experiences_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_USER")
      */
     public function new(Request $request): Response
     {
@@ -51,6 +54,7 @@ class ExperiencesController extends AbstractController
 
     /**
      * @Route("/{id}", name="experiences_show", methods={"GET"})
+     * @IsGranted("ROLE_USER")
      */
     public function show(Experiences $experience): Response
     {
@@ -61,6 +65,7 @@ class ExperiencesController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="experiences_edit", methods={"GET","POST"})
+     * @Security("is_granted('ROLE_USER')")
      */
     public function edit(Request $request, Experiences $experience): Response
     {
@@ -81,6 +86,7 @@ class ExperiencesController extends AbstractController
 
     /**
      * @Route("/{id}", name="experiences_delete", methods={"DELETE"})
+     * @IsGranted("ROLE_USER")
      */
     public function delete(Request $request, Experiences $experience): Response
     {

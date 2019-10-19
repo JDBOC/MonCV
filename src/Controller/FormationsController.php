@@ -6,6 +6,7 @@ use App\Entity\Formations;
 use App\Form\Formations1Type;
 use App\Form\FormationsType;
 use App\Repository\FormationsRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,6 +29,7 @@ class FormationsController extends AbstractController
 
     /**
      * @Route("/new", name="formations_new", methods={"GET","POST"})
+     * @Security("is_granted('ROLE_USER')")
      */
     public function new(Request $request): Response
     {
@@ -61,6 +63,7 @@ class FormationsController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="formations_edit", methods={"GET","POST"})
+     * @Security("is_granted('ROLE_USER')")
      */
     public function edit(Request $request, Formations $formation): Response
     {
@@ -81,6 +84,7 @@ class FormationsController extends AbstractController
 
     /**
      * @Route("/{id}", name="formations_delete", methods={"DELETE"})
+     * @Security("is_granted('ROLE_USER')")
      */
     public function delete(Request $request, Formations $formation): Response
     {

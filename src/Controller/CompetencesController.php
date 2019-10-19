@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Competences;
 use App\Form\CompetencesType;
 use App\Repository\CompetencesRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,6 +29,7 @@ class CompetencesController extends AbstractController
 
     /**
      * @Route("/new", name="competences_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_USER")
      */
     public function new(Request $request): Response
     {
@@ -50,6 +53,7 @@ class CompetencesController extends AbstractController
 
     /**
      * @Route("/{id}", name="competences_show", methods={"GET"})
+     * @IsGranted("ROLE_USER")
      */
     public function show(Competences $competence): Response
     {
@@ -60,6 +64,7 @@ class CompetencesController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="competences_edit", methods={"GET","POST"})
+     * @Security("is_granted('ROLE_USER')")   // and user === competence.getUser()
      */
     public function edit(Request $request, Competences $competence): Response
     {
@@ -80,6 +85,7 @@ class CompetencesController extends AbstractController
 
     /**
      * @Route("/{id}", name="competences_delete", methods={"DELETE"})
+     * @IsGranted("ROLE_USER")
      */
     public function delete(Request $request, Competences $competence): Response
     {

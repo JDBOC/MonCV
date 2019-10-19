@@ -8,8 +8,10 @@ use App\Form\AccountType;
 use App\Form\PasswordUpdateType;
 use App\Form\RegistrationType;
 use Doctrine\Common\Persistence\ObjectManager;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -70,7 +72,7 @@ class AccountController extends AbstractController
    * Permet d'éditer le profil du compte
    *
    * @Route("/account/profile", name="account_profile")
-   *
+   * @Security("is_granted('ROLE_USER')")
    * @return Response
    */
     public function profile(Request $request, ObjectManager $manager) {
@@ -93,6 +95,7 @@ return $this->render ('account/profile.html.twig', [
 
   /**
    * @Route("/account/password-update", name="password_update")
+   * @Security("is_granted('ROLE_USER')")
    */
     public function updatePassword(Request $request, UserPasswordEncoderInterface $encoder, ObjectManager $manager) {
       $passwordUpdate = new PasswordUpdate();
@@ -105,6 +108,7 @@ return $this->render ('account/profile.html.twig', [
       if ($form->isSubmitted ()&& $form->isValid ()) {
         if(!password_verify ($passwordUpdate->getOldPassword (), $user->gethash())){
 
+          $form->get ('oldPassword')->addError (new FormError("Le mot de passe que vous avez tapé n'est pas correct"));
         }
         else
         {
