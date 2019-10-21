@@ -86,6 +86,11 @@ class User implements UserInterface
      */
     private $userRoles;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+
 
   public function getFullName() {
     return "{$this->firstname} {$this->lastname}";
@@ -289,6 +294,8 @@ class User implements UserInterface
         return $this;
     }
 
+
+
     public function getHash(): ?string
     {
         return $this->hash;
@@ -408,6 +415,18 @@ class User implements UserInterface
           $this->userRoles->removeElement($userRole);
           $userRole->removeUser($this);
       }
+
+      return $this;
+  }
+
+  public function getDescription(): ?string
+  {
+      return $this->description;
+  }
+
+  public function setDescription(?string $description): self
+  {
+      $this->description = $description;
 
       return $this;
   }

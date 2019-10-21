@@ -3,15 +3,19 @@
 {% block title %}Experiences index{% endblock %}
 
 {% block body %}
-    <h1>Experiences index</h1>
-
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-2">
+                <a href="{{ path('competences_new') }}" class="btn btn-success"><i class="fas fa-plus-square"></i></a>
+            </div>
+                <h1 class="align-self-center">Experiences index</h1>
+        </div>
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Company</th>
-                <th>Title</th>
-                <th>Entree</th>
+                <th>Société</th>
+                <th>Poste occupé</th>
+                <th>Entrée</th>
                 <th>Sortie</th>
                 <th>Descriptif</th>
                 <th>Lieu</th>
@@ -21,16 +25,17 @@
         <tbody>
         {% for experience in experiences %}
             <tr>
-                <td>{{ experience.id }}</td>
                 <td>{{ experience.company }}</td>
                 <td>{{ experience.title }}</td>
-                <td>{{ experience.entree ? experience.entree|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ experience.sortie ? experience.sortie|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ experience.entree ? experience.entree|date('Y-m-d') : '' }}</td>
+                <td>{{ experience.sortie ? experience.sortie|date('Y-m-d') : '' }}</td>
                 <td>{{ experience.descriptif }}</td>
                 <td>{{ experience.lieu }}</td>
                 <td>
-                    <a href="{{ path('experiences_show', {'id': experience.id}) }}">show</a>
-                    <a href="{{ path('experiences_edit', {'id': experience.id}) }}">edit</a>
+                    <div class="row justify-content-between">
+                        <a href="{{ path('experiences_show', {'id': experience.id}) }}" class="btn btn-outline-warning"><i class="far fa-eye"></i></a>
+                        {{ include('experiences/_delete_form.html.twig') }}
+                    </div>
                 </td>
             </tr>
         {% else %}
@@ -40,6 +45,10 @@
         {% endfor %}
         </tbody>
     </table>
+<div class="justify-content-center">
+    <a href="{{ path('admin_dashboard') }}"> <i class="fas fa-step-backward fa-3x"></i></a>
+    </div>
 
-    <a href="{{ path('experiences_new') }}">Create new</a>
+
+    </div>
 {% endblock %}

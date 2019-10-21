@@ -40,7 +40,8 @@
                   ->setHash ( $this->encoder->encodePassword ( $adminUser , 'confirmation' ) )
                   ->setPicture ('https://media.licdn.com/dms/image/C5103AQHftIGR4eua3Q/profile-displayphoto-shrink_200_200/0?e=1576713600&v=beta&t=19jki1GOWdSvKZaTPCLoNzaEobbaXTemQPxgkg8D9f0')
                   ->setAge (41)
-                  ->setTitle ('Développeur Web')
+                  ->setTitle ('Développeur Web Junior')
+                  ->setDescription ($faker->paragraph)
                   ->addUserRole($adminRole)
                   ;
 

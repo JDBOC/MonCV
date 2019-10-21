@@ -42,7 +42,7 @@ class FormationsController extends AbstractController
             $entityManager->persist($formation);
             $entityManager->flush();
 
-            return $this->redirectToRoute('formations_index');
+            return $this->redirectToRoute('admin_dashboard');
         }
 
         return $this->render('formations/new.html.twig', [
@@ -67,13 +67,13 @@ class FormationsController extends AbstractController
      */
     public function edit(Request $request, Formations $formation): Response
     {
-        $form = $this->createForm(Formations1Type::class, $formation);
+        $form = $this->createForm(FormationsType::class, $formation);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('formations_index');
+            return $this->redirectToRoute('admin_dashboard');
         }
 
         return $this->render('formations/edit.html.twig', [
@@ -94,6 +94,6 @@ class FormationsController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('formations_index');
+        return $this->redirectToRoute('admin_dashboard');
     }
 }

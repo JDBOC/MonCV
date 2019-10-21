@@ -5,6 +5,7 @@
   use App\Entity\User;
   use App\Service\StatsService;
   use Doctrine\Common\Persistence\ObjectManager;
+  use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
   use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
   use Symfony\Component\Routing\Annotation\Route;
   use Symfony\Component\HttpFoundation\Response;
@@ -15,6 +16,7 @@
      * @Route("/admin", name="admin_dashboard")
      * @param ObjectManager $manager
      * @param StatsService $statsService
+     * @Security("is_granted('ROLE_USER')")
      * @return Response
      */
     public function index(ObjectManager $manager, StatsService $statsService): Response

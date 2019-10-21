@@ -21,10 +21,17 @@
             </tr>
         </tbody>
     </table>
+<div>
+<div class="row justify-content-center justify-content-around">
 
-    <a href="{{ path('competences_index') }}">back to list</a>
+    <a href="{{ path('competences_index') }}" class="btn btn-primary"><i class="fas fa-step-backward"></i></a>
 
-    <a href="{{ path('competences_edit', {'id': competence.id}) }}">edit</a>
+
+   <a href="{{ path('competences_edit', {'id': competence.id}) }}" class="btn btn-warning"> <i class="far fa-edit"></i></a>
+
 
     {{ include('competences/_delete_form.html.twig') }}
+
+</div>
+</div>
 {% endblock %}

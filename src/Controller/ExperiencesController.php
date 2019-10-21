@@ -75,7 +75,7 @@ class ExperiencesController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('experiences_index');
+            return $this->redirectToRoute('admin_dashboard');
         }
 
         return $this->render('experiences/edit.html.twig', [
@@ -96,6 +96,6 @@ class ExperiencesController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('experiences_index');
+        return $this->redirectToRoute('admin_dashboard');
     }
 }

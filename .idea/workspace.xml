@@ -2,10 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdminDashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/StatsService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/dashboard/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminDashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CompetencesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CompetencesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FormationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FormationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AccountType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AccountType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/dashboard/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dashboard/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/competences/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/competences/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/competences/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/competences/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/competences/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/competences/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/experiences/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/experiences/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/experiences/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/formations/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formations/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/formations/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formations/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/formations/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formations/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/headerAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partialsAdmin/headerAdmin.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,15 +171,17 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/templates/partials" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin/partialsAdmin" />
+      <recent name="$PROJECT_DIR$/templates/admin" />
+      <recent name="$PROJECT_DIR$/public/css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,5 +229,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/admin/dashboard/index.html.twig</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

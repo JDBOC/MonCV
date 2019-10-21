@@ -16,9 +16,8 @@ class AccountType extends AbstractType
             ->add('firstname')
             ->add('age')
             ->add('title')
-
-
             ->add('email')
+            ->add ('description')
         ;
     }
 

@@ -42,7 +42,7 @@ class CompetencesController extends AbstractController
             $entityManager->persist($competence);
             $entityManager->flush();
 
-            return $this->redirectToRoute('competences_index');
+            return $this->redirectToRoute('admin_dashboard');
         }
 
         return $this->render('competences/new.html.twig', [
@@ -74,7 +74,7 @@ class CompetencesController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('competences_index');
+            return $this->redirectToRoute('admin_dashboard');
         }
 
         return $this->render('competences/edit.html.twig', [
@@ -95,6 +95,6 @@ class CompetencesController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('competences_index');
+        return $this->redirectToRoute('admin_dashboard');
     }
 }

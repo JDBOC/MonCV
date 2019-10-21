@@ -85,7 +85,7 @@ class AccountController extends AbstractController
         $manager->flush ();
         $this->addFlash ('success', "Modification effectuée !");
 
-        return $this->redirectToRoute ('index');
+        return $this->redirectToRoute ('admin_dashboard');
       }
 
 return $this->render ('account/profile.html.twig', [
@@ -120,7 +120,7 @@ return $this->render ('account/profile.html.twig', [
           $manager->flush ();
         }
         $this->addFlash ('success', "Mot de passe modifié !");
-        return $this->redirectToRoute ('index');
+        return $this->redirectToRoute ('admin_dashboard');
       }
 
       return $this->render ('account/updatePassword.html.twig', [

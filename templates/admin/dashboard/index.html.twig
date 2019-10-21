@@ -1,76 +1,103 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/baseAdmin.html.twig' %}
 
 {% block title %}
-Dashboard
+  Dashboard
 {% endblock %}
 
 {% block body %}
-<div class="container">
-  <div class="row mt-2">
-    <div class="col">
-      <div class="card bg-primary text-white text-center">
-        <a href="{{ path('competences_index') }}">
-        <div class="card-body">
-          <div class="row">
-
-            <div class="col-4">
-              <i class="fas fa-users fa-3x"></i>
-            </div>
-            <div class="col-8">
-              <h4 class="card-title">{{ stats.competences }} compétences enreigstrées </h4>
+  <div class="container">
+    <h1 class="text-center">Interface administrateur</h1>
+    <div class="bg-light p-5 my-5">
+      <div class="card-deck">
+        <div class="card bg-primary text-white">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3">
+                <i class="fas fa-users fa-2x"></i>
+              </div>
+              <a href="{{ path('competences_index') }}">
+                <div class="col">
+                  <h5 class="card-title">  {{ stats.competences }} compétences enregistrées </h5>
+                </div>
+              </a>
             </div>
           </div>
         </div>
-        </a>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-warning text-white text-center">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-4">
-              <i class="fas fa-hotel fa-3x"></i>
+        <div class="card bg-warning text-white">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3">
+                <i class="fas fa-hotel fa-2x"></i>
+              </div>
+              <a href="{{ path('experiences_index') }}">
+                <div class="col">
+                  <h5 class="card-title">  {{ stats.experiences }} expériences enregistrées</h5>
+                </div>
+              </a>
             </div>
-            <div class="col-8">
-              <h4 class="card-title">{{ stats.experiences }} expériences enregistrées</h4>
+          </div>
+        </div>
+        <div class="card bg-danger text-white">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3">
+                <i class="fas fa-folder fa-2x"></i>
+              </div>
+              <a href="{{ path('formations_index') }}">
+                <div class="col">
+                  <h5 class="card-title">{{ stats.formations }} formations enregistrées</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="card-deck">
+        <div class="card bg-success text-white ">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3">
+                <i class="fas fa-comments fa-2x"></i>
+              </div>
+              <a href="{{ path('account_profile') }}">
+                <div class="col">
+                  <h5 class="card-title">Modifier profil</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-success text-white">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3">
+                <i class="fas fa-unlock fa-2x"></i>
+              </div>
+              <a href="{{ path('password_update') }}">
+                <div class="col">
+                  <h5 class="card-title">Modifier MdP</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-success text-white">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3">
+                <i class="fas fa-eye fa-2x"></i>
+              </div>
+              <a href="{{ path('index') }}" target="_blank">
+                <div class="col">
+                  <h5 class="card-title align-self-center">Voir le site</h5>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row mt-2">
-    <div class="col">
-      <div class="card bg-danger text-white text-center">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-4">
-              <i class="fas fa-folder fa-3x"></i>
-            </div>
-            <div class="col-8">
-              <h4 class="card-title">{{ stats.formations }} formations enregistrées</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-success text-white text-center">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-4">
-              <i class="fas fa-comments fa-3x"></i>
-            </div>
-            <div class="col-8">
-              <h4 class="card-title">{{ path('account_profile') }} Modifier profil utilisateur</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
 
 {% endblock %}
