@@ -18,7 +18,7 @@
           <h2>{{ user.title }} junior</h2>
         </div>
 
-        <p class="lead mb-5">{{user.description}} </p>
+        <p class="lead mb-5">{{ user.description }} </p>
         <br><br>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/jdboccara/" target="_blank">
@@ -46,42 +46,42 @@
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline dev-icons">
             <li class="list-inline-item">
-              <i class="fab fa-php"  data-aos="flip-left"
+              <i class="fab fa-php" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-css3-alt"  data-aos="flip-left"
+              <i class="fab fa-css3-alt" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-js-square"  data-aos="flip-left"
+              <i class="fab fa-js-square" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-html5"  data-aos="flip-left"
+              <i class="fab fa-html5" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-mysql-square"  data-aos="flip-left"
+              <i class="fab fa-mysql-square" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-symfony"  data-aos="flip-left"
+              <i class="fab fa-symfony" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-sass"  data-aos="flip-left"
+              <i class="fab fa-sass" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-less"  data-aos="flip-left"
+              <i class="fab fa-less" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
@@ -124,29 +124,7 @@
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experiences</h2>
-        {% for experience in experiences %}
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="resume-content">
-              <h2>test</h2>
-              <h3 class="mb-0">{{ experience.title }}</h3>
-              <div class="subheading mb-3">{{ experience.company }}</div>
-              <p>
-                {{ experience.descriptif }}
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">{{ experience.entree | date('d/m/Y') }} - {{ experience.sortie | date('d/m/Y') }}</span>
-            </div>
-          </div>
-        {% endfor %}
-
-
-      </div>
-
-    </section>
+ {% include 'experiences/timeline.html.twig' %}
 
     <hr class="m-0">
 

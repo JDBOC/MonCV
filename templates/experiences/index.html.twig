@@ -27,8 +27,8 @@
             <tr>
                 <td>{{ experience.company }}</td>
                 <td>{{ experience.title }}</td>
-                <td>{{ experience.entree ? experience.entree|date('Y-m-d') : '' }}</td>
-                <td>{{ experience.sortie ? experience.sortie|date('Y-m-d') : '' }}</td>
+                <td>{{ experience.entree|date('Y-m-d') }}</td>
+                <td>{{ experience.sortie|date('Y-m-d') }}</td>
                 <td>{{ experience.descriptif }}</td>
                 <td>{{ experience.lieu }}</td>
                 <td>

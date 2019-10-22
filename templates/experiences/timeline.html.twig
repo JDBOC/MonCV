@@ -1,0 +1,42 @@
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
+{% endblock %}
+{% block body %}
+<section class="timeline resume-section" id="experience">
+
+
+
+  <ul>
+    {% for experience in experiences %}
+    <li>
+      <div class="content">
+        {% if experience.id is even %}
+        <div class="row">
+          <h2>
+            <time>{{experience.company}}</time>
+          </h2>
+          <strong>{{ experience.entree|date('Y-m-d H:i:s') }} - {{ experience.sortie|date('Y-m-d H:i:s') }}</strong>
+        </div>
+{% else %}
+  <div class="row">
+
+    <strong>{{ experience.entree }} - {{ experience.sortie }}</strong>
+    <h2>
+      <time>{{experience.company}}</time>
+    </h2>
+  </div>
+  {% endif %}
+        <p><strong>{{ experience.title }}</strong>
+          <br>
+          {{ experience.descriptif }}
+      </div>
+    </li>
+{% endfor %}
+  </ul>
+</section>
+{% endblock %}
+
+
+{% block javascripts %}
+  <script>{{ asset('js/timeline.js') }}</script>
+{% endblock %}
