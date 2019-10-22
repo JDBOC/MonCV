@@ -4,7 +4,6 @@
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/public/css/timeline.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/js/timeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/experiences/timeline.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccountController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminDashboardController.php" afterDir="false" />
@@ -12,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/FormationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FormationsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Experiences.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Experiences.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/AccountType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AccountType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/dashboard/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dashboard/index.html.twig" afterDir="false" />
@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/templates/experiences/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/_delete_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/experiences/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/experiences/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/experiences/timeline.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/timeline.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/formations/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formations/_delete_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/formations/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formations/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/formations/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formations/show.html.twig" afterDir="false" />
