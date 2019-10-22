@@ -15,23 +15,23 @@
         </h1>
         <hr>
         <div class="subheading mb-5">
-          <h2>{{ user.title }} junior</h2>
+          <h2>{{ user.title }}</h2>
         </div>
 
         <p class="lead mb-5">{{ user.description }} </p>
         <br><br>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/jdboccara/" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-linkedin-in fa-1.5x"></i>
           </a>
           <a href="#">
-            <i class="fab fa-github"></i>
+            <i class="fab fa-github fa-1.5x"></i>
           </a>
           <a href="{{ path('message') }}">
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-envelope fa-1.5x"></i>
           </a>
           <a href="{{ asset('images/CV.pdf') }}" target="_blank">
-            <i class="far fa-file-pdf"></i>
+            <i class="far fa-file-pdf fa-1.5x"></i>
           </a>
         </div>
       </div>
@@ -41,65 +41,65 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
       <div class="w-100 ">
-        <h2 class="mb-5">Skills</h2>
+        <h2 class="text-center mb-5 border-blue">Skills</h2>
         <div>
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline dev-icons">
             <li class="list-inline-item">
-              <i class="fab fa-php" data-aos="flip-left"
+              <i class="fab fa-php fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-css3-alt" data-aos="flip-left"
+              <i class="fab fa-css3-alt fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-js-square" data-aos="flip-left"
+              <i class="fab fa-js-square fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-html5" data-aos="flip-left"
+              <i class="fab fa-html5 fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-mysql-square" data-aos="flip-left"
+              <i class="fab fa-mysql-square fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-symfony" data-aos="flip-left"
+              <i class="fab fa-symfony fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-sass" data-aos="flip-left"
+              <i class="fab fa-sass fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-less" data-aos="flip-left"
+              <i class="fab fa-less fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
             <li class="list-inline-item">
-              <i class="fab fa-github" data-aos="flip-left"
+              <i class="fab fa-github fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
 
             <li class="list-inline-item">
-              <i class="fab fa-npm" data-aos="flip-left"
+              <i class="fab fa-npm fa-3x" data-aos="flip-left"
                  data-aos-easing="ease-out-cubic"
                  data-aos-duration="2000"></i>
             </li>
           </ul>
         </div>
 
-        <div class="subheading mb-3">Workflow</div>
+        <div class="subheading mt-5 mb-3">Workflow</div>
         <ul class="fa-ul mb-0">
           <li>
             <i class="fa-li fa fa-check"></i>
@@ -130,7 +130,7 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
       <div class="w-100">
-        <h2 class="mb-5">Formations</h2>
+        <h2 class="text-center mb-5 blue">Formations</h2>
 
         {% for formation in formations %}
           <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
@@ -150,46 +150,7 @@
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
-      <div class="w-100">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Google Analytics Certified Developer
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Mobile Web Specialist - Google Certification
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2009
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            2<sup>nd</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2008
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - James Buchanan High School - Hackathon 2006
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            3<sup>rd</sup>
-            Place - James Buchanan High School - Hackathon 2005
-          </li>
-        </ul>
-      </div>
-    </section>
+
 
   </div>
 
