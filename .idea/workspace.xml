@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CV3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CV3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +189,7 @@
       <workItem from="1571298344883" duration="13829000" />
       <workItem from="1571319075874" duration="30827000" />
       <workItem from="1571478363981" duration="13883000" />
-      <workItem from="1571737450728" duration="162000" />
+      <workItem from="1571737450728" duration="1119000" />
     </task>
     <servers />
   </component>
