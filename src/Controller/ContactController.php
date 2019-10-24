@@ -24,7 +24,7 @@
      * @param CoordonatesRepository $coordonatesRepository
      * @return Response
      */
-    public function contact(Request $request , ContactNotification $notification , CoordonatesRepository $coordonatesRepository)
+    public function contact(Request $request, ContactNotification $notification, CoordonatesRepository $coordonatesRepository)
     {
       $contact = new Contact();
       $form = $this->createForm ( ContactType::class , $contact );

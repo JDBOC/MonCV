@@ -24,9 +24,15 @@
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="#education">Formation</a>
       </li>
+      {% if app.user %}
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="{{ path('account_logout') }}"><i class="fas fa-sign-out-alt"></i></a>
+      </li>
+      {% else %}
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="{{ path('admin_dashboard') }}"><i class="fas fa-key"></i></a>
       </li>
+      {% endif %}
     </ul>
   </div>
 </nav>

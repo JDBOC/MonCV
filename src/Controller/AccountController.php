@@ -38,7 +38,7 @@ class AccountController extends AbstractController
    */
     public function logout()
     {
-
+return $this->redirectToRoute ('index');
     }
 
   /**
