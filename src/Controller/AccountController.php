@@ -31,6 +31,7 @@ class AccountController extends AbstractController
         return $this->render('account/login.html.twig', [
           'hasError' => $error !== null
         ]);
+
     }
 
   /**
@@ -38,7 +39,7 @@ class AccountController extends AbstractController
    */
     public function logout()
     {
-return $this->redirectToRoute ('index');
+
     }
 
   /**

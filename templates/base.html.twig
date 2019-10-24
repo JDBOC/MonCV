@@ -16,7 +16,11 @@
         {% endblock %}
     </head>
     <body>
+    {% if app.user %}
+    {% include 'admin/partialsAdmin/headerAdmin.html.twig' %}
+    {% else %}
     {% include 'partials/header.html.twig' %}
+    {% endif %}
 {% for label, messages in app.flashes %}
 <div class="container">
   <div class="card alert-success align-items-center mt-5">
