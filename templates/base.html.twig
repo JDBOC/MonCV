@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-          <!-- Bootstrap core CSS -->
-          <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-          <!-- Custom fonts for this template -->
-          <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-          <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-          <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-          <!-- Custom styles for this template -->
-          <link href="{{ asset('css/resume.min.css') }}" rel="stylesheet">
-          <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        {% endblock %}
-    </head>
-    <body>
-    {% if app.user %}
-    {% include 'admin/partialsAdmin/headerAdmin.html.twig' %}
-    {% else %}
-    {% include 'partials/header.html.twig' %}
-    {% endif %}
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Welcome!{% endblock %}</title>
+  {% block stylesheets %}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <script src="https://use.fontawesome.com/4fbb60798d.js" crossorigin="use-credentials"></script>
+    <link href="{{ asset('css/resume.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+  {% endblock %}
+</head>
+<body>
+
+{% include 'partials/header.html.twig' %}
+
 {% for label, messages in app.flashes %}
-<div class="container">
-  <div class="card alert-success align-items-center mt-5">
-    {% for message in messages %}
-<p>{{ message }}</p>
-    {% endfor %}
+  <div class="container">
+    <div class="card alert-success align-items-center mt-5">
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>
   </div>
-</div>
 {% endfor %}
-        {% block body %}
-        {% endblock %}
-        {% block javascripts %}
-            <!-- Bootstrap core JavaScript -->
-          <script src="{{ asset('js/jquery.min.js') }}"></script>
-            <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-          <script src="https://kit.fontawesome.com/89e753fb7b.js" crossorigin="anonymous"></script>
-            <!-- Plugin JavaScript -->
-            <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
-            <!-- Custom scripts for this template -->
-          <script src="{{ asset('js/resume.min.js') }}"></script>
-          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-          <script>
-              AOS.init();
-          </script>
-        {% endblock %}
-    </body>
+{% block body %}
+{% endblock %}
+{% block javascripts %}
+  <script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+  <script src="https://kit.fontawesome.com/89e753fb7b.js" crossorigin="anonymous"></script>
+  <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
+  <script src="{{ asset('js/resume.min.js') }}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="{{ asset('js/timeline.js') }}"></script>
+  <script>
+      AOS.init();
+  </script>
+{% endblock %}
+</body>
 </html>
