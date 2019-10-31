@@ -115,6 +115,9 @@
       <path value="$PROJECT_DIR$/vendor/fontawesome-free/css" />
       <path value="$PROJECT_DIR$/vendor/fontawesome-free/webfonts" />
       <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/vendor/maglnet/composer-require-checker" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/path-util" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/glob" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
