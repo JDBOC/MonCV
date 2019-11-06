@@ -143,6 +143,8 @@ section.resume-section .resume-item .resume-date {
   min-width: none;
 }
 
+
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
@@ -173,4 +175,13 @@ a {
 
 a:hover, a:focus, a:active {
   color: #824027;
+}
+
+.citation {
+  padding: 3px;
+  color: black;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: gainsboro;
 }
