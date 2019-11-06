@@ -28,12 +28,10 @@ class ExperiencesController extends AbstractController
         ]);
     }
 
-  /**
-   * @Route("/new", name="experiences_new", methods={"GET","POST"})
-   * @IsGranted("ROLE_USER")
-   * @param Request $request
-   * @return Response
-   */
+    /**
+     * @Route("/new", name="experiences_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_USER")
+     */
     public function new(Request $request): Response
     {
         $experience = new Experiences();
@@ -45,7 +43,7 @@ class ExperiencesController extends AbstractController
             $entityManager->persist($experience);
             $entityManager->flush();
 
-            return $this->redirectToRoute('experiences_index');
+            return $this->redirectToRoute('admin_dashboard');
         }
 
         return $this->render('experiences/new.html.twig', [

@@ -19,6 +19,14 @@
      * @param $placeholder
      * @return array
      */
+    /**
+     * Permet de configurer chaque champs du formulaire
+     *
+     * @param $label
+     * @param $placeholder
+     * param array $options
+     * @return array
+     */
     protected function getConfig($label, $placeholder, $options = []){
       return array_merge_recursive ([
         'label' => $label,

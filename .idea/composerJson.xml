@@ -3,8 +3,8 @@
   <component name="ComposerJsonPluginSettings">
     <unboundedVersionInspectionSettings>
       <excludedPackages>
-        <pattern pattern="roave/*" />
         <pattern pattern="symfony/*" />
+        <pattern pattern="roave/*" />
       </excludedPackages>
     </unboundedVersionInspectionSettings>
     <customRepositories />

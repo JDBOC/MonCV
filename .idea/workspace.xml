@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/composerJson.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/experiences/timeline.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/timeline.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ExperiencesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AppFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AppFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ExperiencesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ExperiencesType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/header.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,13 +151,13 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.env" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MonCV-V2/MonCV" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SymfonyFormation/symbnb" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -203,9 +209,6 @@
       <workItem from="1571737450728" duration="1119000" />
       <workItem from="1571738752860" duration="631000" />
       <workItem from="1572266465198" duration="5183000" />
-      <workItem from="1573030287424" duration="941000" />
-      <workItem from="1573033076361" duration="2343000" />
-      <workItem from="1573041102212" duration="100000" />
     </task>
     <servers />
   </component>
