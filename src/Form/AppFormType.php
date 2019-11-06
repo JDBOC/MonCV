@@ -19,12 +19,12 @@
      * @param $placeholder
      * @return array
      */
-    public function getConfig($label, $placeholder) {
-      return [
+    protected function getConfig($label, $placeholder, $options = []){
+      return array_merge_recursive ([
         'label' => $label,
         'attr' => [
           'placeholder' => $placeholder
         ]
-      ];
+      ], $options);
     }
   }
