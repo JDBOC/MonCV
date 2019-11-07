@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\User;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -17,7 +18,7 @@ class AccountType extends AbstractType
             ->add('age')
             ->add('title')
             ->add('email')
-            ->add ('description')
+            ->add ('description', CKEditorType::class)
         ;
     }
 
