@@ -11,7 +11,7 @@
             {% if experience.id is odd %}
               <div class="">
                 <div class="col">
-                  <time><strong>{{ experience.sortie|date('d-m-Y') }} - {{ experience.entree|date('d-m-Y') }}
+                  <time><strong>{{ experience.entree|date('d-m-Y') }} - {{ experience.sortie|date('d-m-Y') }}
                     </strong></time>
                 </div>
                 <div class="col">
@@ -23,7 +23,7 @@
             {% else %}
               <div class=" text-lg-right">
                 <div class="col">
-                  <time><strong>{{ experience.sortie|date('d-m-Y') }} - {{ experience.entree|date('d-m-Y') }}
+                  <time><strong>{{ experience.entree|date('d-m-Y') }} - {{ experience.sortie|date('d-m-Y') }}
                     </strong></time>
                 </div>
                 <div class="col">
