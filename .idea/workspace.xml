@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/composerJson.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/resume.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/resume.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191015112432.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20191015112432.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/experiences/timeline.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/experiences/timeline.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
