@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/images/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/portfolio/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,6 +221,7 @@
       <workItem from="1571737450728" duration="1119000" />
       <workItem from="1571738752860" duration="631000" />
       <workItem from="1572266465198" duration="5183000" />
+      <workItem from="1573476763928" duration="13350000" />
     </task>
     <servers />
   </component>
