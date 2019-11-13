@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Images;
 use App\Entity\Portfolio;
 use App\Form\PortfolioType;
+use App\Repository\ImagesRepository;
 use App\Repository\PortfolioRepository;
 
 
@@ -19,10 +20,11 @@ class PortfolioController extends AbstractController
     /**
      * @Route("/portfolio", name="portfolio")
      */
-    public function index(PortfolioRepository $repository)
+    public function index(PortfolioRepository $repository, ImagesRepository $imagesRepository)
     {
         return $this->render('portfolio/index.html.twig', [
-            'portfolio' => $repository->findAll ()
+            'portfolio' => $repository->findAll (),
+            'images' => $imagesRepository->findAll (),
         ]);
     }
 
@@ -44,6 +46,7 @@ class PortfolioController extends AbstractController
 
       if ($form -> isSubmitted () && $form->isValid ()) {
         $manager = $this->getDoctrine()->getManager();
+        $manager->persist ($image);
         $manager->persist ($portfolio);
         $manager->flush ();
 

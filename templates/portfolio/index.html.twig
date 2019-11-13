@@ -4,19 +4,16 @@
 
 {% block body %}
 
-
-  <div class="card-group">
-    {% for port in portfolio %}
+<div class="container">
+    {% for port in portfolio%}
     <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This content is a little bit longer.</p>
 
+      <img src="{{ asset('image') }}" class="card-img-top" alt="{{ port.id }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ port.titre }}</h5>
+        <p class="card-text">{{ port.description }}</p>
       </div>
-    </div>
+      </div>
     {% endfor %}
   </div>
-
 {% endblock %}
