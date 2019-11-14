@@ -26,12 +26,12 @@ class Upload
         return $this->id;
     }
 
-    public function getTitre(): ?string
+    public function getTitre()
     {
         return $this->titre;
     }
 
-    public function setTitre(string $titre): self
+    public function setTitre($titre)
     {
         $this->titre = $titre;
 

@@ -3,21 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ImagesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PortfolioController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Images.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Portfolio.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ImagesType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/PortfolioType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191111125845.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ImagesRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PortfolioRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/images/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/images/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upload/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upload/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload/show.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

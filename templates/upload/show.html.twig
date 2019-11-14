@@ -18,6 +18,12 @@
         </tbody>
     </table>
 
+{% for up in upload %}
+<h3>test</h3>
+    <img src="{{ up.titre }}" alt="">
+
+
+    {% endfor %}
     <a href="{{ path('upload_index') }}">back to list</a>
 
     <a href="{{ path('upload_edit', {'id': upload.id}) }}">edit</a>

@@ -14,13 +14,13 @@
             </tr>
         </thead>
         <tbody>
-        {% for upload in uploads %}
+        {% for up in upload %}
             <tr>
-                <td>{{ upload.id }}</td>
-                <td>{{ upload.titre }}</td>
+                <td>{{ up.id }}</td>
+                <td>{{ up.titre }}</td>
                 <td>
-                    <a href="{{ path('upload_show', {'id': upload.id}) }}">show</a>
-                    <a href="{{ path('upload_edit', {'id': upload.id}) }}">edit</a>
+                    <a href="{{ path('upload_show', {'id': up.id}) }}">show</a>
+                    <a href="{{ path('upload_edit', {'id': up.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
