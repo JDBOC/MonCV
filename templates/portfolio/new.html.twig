@@ -1,57 +1,11 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}New Portfolio{% endblock %}
 
-{% form_theme form _self %}
 {% block body %}
-  <div class="container">
-<h2>TEST</h2>
-  {{ form_start(form) }}
-  {{ form_widget(form) }}
-  <button class="btn">{{ button_label|default('Save') }}</button>
-  {{ form_end(form) }}
-  </div>
-{% endblock %}
+    <h1>Create new Portfolio</h1>
 
-{% block _portfolio_images_widget %}
-<p> Ajoutez des images du projet </p>
-  {{ form_widget(form)}}
-  <div class="form-group">
-    <button type="button" id="portfolio-images" class="btn">Ajouter</button>
-  </div>
-{% endblock %}
+    {{ include('portfolio/_form.html.twig') }}
 
-{% block _portfolio_images_entry_widget %}
-<div class="form-group">
-  <div class="row">
-    <div class="col">
-{{ form_widget(form.images) }}
-    </div>
-    <div class="col">
-      {{ form_widget(form.images) }}
-    </div>
-  </div>
-</div>
-{% endblock %}
-
-{% block _portfolio_images_entry_row %}
-{{ form_widget(form) }}
-{% endblock %}
-
-{% block title %}
-Portfolio
-{% endblock %}
-
-{% block javascripts %}
-  <script>
-
-  $('#portfolio-images').click(function () {
-      //Je récupère les numéros des futurs champs
-  const index = $('#portfolio_images div.form-group').length;
-      //Je récupère le propotype des entrées
-  const tmpl = $('#portfolio_images').data('prototype').replace(/___name___/g, index);
-
-  $('#portfolio-images').append(tmpl);
-
-});
-  </script>
+    <a href="{{ path('portfolio_index') }}">back to list</a>
 {% endblock %}

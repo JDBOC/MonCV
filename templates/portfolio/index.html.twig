@@ -1,19 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Portfolio{% endblock %}
+{% block title %}Portfolio index{% endblock %}
 
 {% block body %}
+    <h1>Portfolio index</h1>
 
-<div class="container">
-    {% for port in portfolio%}
-    <div class="card">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for portfolio in portfolios %}
+            <tr>
+                <td>{{ portfolio.id }}</td>
+                <td>{{ portfolio.titre }}</td>
+                <td>{{ portfolio.description }}</td>
+                <td>
+                    <a href="{{ path('portfolio_show', {'id': portfolio.id}) }}">show</a>
+                    <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-      <img src="{{ asset('image') }}" class="card-img-top" alt="{{ port.id }}">
-      <div class="card-body">
-        <h5 class="card-title">{{ port.titre }}</h5>
-        <p class="card-text">{{ port.description }}</p>
-      </div>
-      </div>
-    {% endfor %}
-  </div>
+    <a href="{{ path('portfolio_new') }}">Create new</a>
 {% endblock %}
