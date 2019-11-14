@@ -8,17 +8,12 @@
     {% for port in portfolio%}
     <div class="card">
 
-      <img src="" class="card-img-top" alt="{{ port.id }}">
-
+      <img src="{{ asset('image') }}" class="card-img-top" alt="{{ port.id }}">
       <div class="card-body">
         <h5 class="card-title">{{ port.titre }}</h5>
         <p class="card-text">{{ port.description }}</p>
       </div>
       </div>
     {% endfor %}
-  {% for image in images %}
-<p>test</p>
-    <img src="{{ asset('images/{{ image.url}') }}" class="card-img-top" alt="">
-  {% endfor %}
   </div>
 {% endblock %}

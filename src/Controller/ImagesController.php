@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Images;
-use App\Entity\Portfolio;
 use App\Form\ImagesType;
 use App\Repository\ImagesRepository;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -33,7 +32,7 @@ class ImagesController extends AbstractController
    * @Route("/pictures/new", name="pictures")
    * @IsGranted("ROLE_USER")
    * @param Request $request
-   * @param Portfolio $portfolio
+   * @param ObjectManager $manager
    * @return Response
    */
     public function new(Request $request)
@@ -44,7 +43,7 @@ class ImagesController extends AbstractController
 
       if ($form -> isSubmitted () && $form -> isValid ()) {
       $file = $image->getUrl ();
-      $fileName = str_replace (" ", "", $image->getTitre ()).'.'.$file->guessExtension();
+      $fileName = md5 (uniqid ()).'.'.$file->guessExtension();
         try {
           $file->move(
             $this->getParameter('images_directory'),
@@ -53,7 +52,6 @@ class ImagesController extends AbstractController
         } catch (FileException $e) {
           // ... handle exception if something happens during file upload
         }
-
         $manager = $this->getDoctrine()->getManager();
         $manager-> persist ($image);
         $manager->flush ();

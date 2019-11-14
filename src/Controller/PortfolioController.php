@@ -9,7 +9,6 @@ use App\Repository\ImagesRepository;
 use App\Repository\PortfolioRepository;
 
 
-use Doctrine\Common\Persistence\ObjectManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,23 +34,19 @@ class PortfolioController extends AbstractController
    * @IsGranted("ROLE_USER")
    * @return Response
    */
-    public function new(Request $request, ObjectManager $manager)
+    public function new(Request $request)
     {
       $portfolio = new Portfolio();
       $image = new Images();
 
-
+      $image -> setTitre ("titre de l'image");
       $portfolio->addImage ($image);
       $form = $this->createForm (PortfolioType::class, $portfolio);
       $form -> handleRequest ($request);
 
       if ($form -> isSubmitted () && $form->isValid ()) {
-        foreach ($portfolio->getImages () as $image){
-          $image->setPortfolio ($portfolio);
-          $manager->persist ($image);
-        }
-        //$manager = $this->getDoctrine()->getManager();
-
+        $manager = $this->getDoctrine()->getManager();
+        $manager->persist ($image);
         $manager->persist ($portfolio);
         $manager->flush ();
 
