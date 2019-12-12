@@ -41,9 +41,14 @@
         $file = $upload->getTitre ();
         $fileName = md5 (uniqid ()).'.'.$file->guessExtension();
         $file->move($this->getParameter ('upload_directory'), $fileName);
+        $upload->setUrl (realpath ('/public/images/'.'/'.$fileName));
         $upload->setTitre ($fileName);
 
-        // ... persist the $product variable or any other work
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($upload);
+        $entityManager->flush();
+
+
 
         return $this->redirectToRoute ( 'upload_index' );
       }

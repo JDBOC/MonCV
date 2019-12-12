@@ -19,9 +19,14 @@
                 <th>Description</th>
                 <td>{{ portfolio.description }}</td>
             </tr>
+
+
+
         </tbody>
     </table>
-
+    {% for port in portfolio %}
+    <img src="{{ portfolio.images }}" alt="">
+    {% endfor %}
     <a href="{{ path('portfolio_index') }}">back to list</a>
 
     <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}">edit</a>

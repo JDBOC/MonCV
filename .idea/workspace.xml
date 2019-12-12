@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7923f91-1a9f-49e1-97a5-2d8f290ecf2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/ad.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/portfolio/_collection.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CV3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CV3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/a21005459d188fc3599ea677d870a4f8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/timeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PortfolioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Portfolio.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PortfolioType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PortfolioType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UploadType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UploadType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/portfolio/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/portfolio/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/portfolio/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/upload/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/upload/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upload/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload/new.html.twig" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,48 +175,55 @@
   </component>
   <component name="ProjectId" id="1SEjUPLeDPhciULUIPhxn0Pm6Df" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.env&#10;/home/jdboc/Documents/perso/MonCV/public/bundles/fosckeditor/contents.css" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SymfonyFormation/symbnb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/templates/partials" />
-      <recent name="$PROJECT_DIR$/public/js" />
-      <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/admin/partialsAdmin" />
       <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/public/css" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/templates/partials" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -224,6 +244,11 @@
       <workItem from="1571738752860" duration="631000" />
       <workItem from="1572266465198" duration="5183000" />
       <workItem from="1573476763928" duration="28325000" />
+      <workItem from="1573806304120" duration="31609000" />
+      <workItem from="1574157626655" duration="1100000" />
+      <workItem from="1574263209543" duration="662000" />
+      <workItem from="1574701054421" duration="555000" />
+      <workItem from="1576139309431" duration="2194000" />
     </task>
     <servers />
   </component>

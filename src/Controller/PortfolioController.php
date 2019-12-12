@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Image;
 use App\Entity\Portfolio;
+use App\Entity\Upload;
 use App\Form\PortfolioType;
 use App\Repository\PortfolioRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -26,19 +28,37 @@ class PortfolioController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/new", name="portfolio_new", methods={"GET","POST"})
-     * @IsGranted("ROLE_USER")
-     */
+  /**
+   * @Route("/new", name="portfolio_new", methods={"GET","POST"})
+   * @IsGranted("ROLE_USER")
+   * @param Request $request
+   * @return Response
+   */
     public function new(Request $request): Response
     {
         $portfolio = new Portfolio();
+
+        $image = new Image();
+        $image ->setUrl ('http://placehold.it/400x200');
+
+      $image2 = new Image();
+      $image2 ->setUrl ('http://placehold.it/400x200');
+
+        $portfolio->addImage ($image)
+                  ->addImage ($image2);
+
+
         $form = $this->createForm(PortfolioType::class, $portfolio);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+            foreach ($portfolio->getImages () as $image) {
+              $image -> setPortfolio ($portfolio);
+              $entityManager->persist ($image);
+            }
             $entityManager->persist($portfolio);
+
             $entityManager->flush();
 
             return $this->redirectToRoute('portfolio_index');

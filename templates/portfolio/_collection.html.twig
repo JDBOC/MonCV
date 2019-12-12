@@ -1,18 +1,3 @@
-{% extends 'base.html.twig' %}
-
-{% form_theme form _self %}
-
-{% block body %}
-  <div class="container">
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button type="submit" class="btn btn-info">Enregistrer le portfolio</button>
-    {{ form_end(form) }}
-    <a href="{{ path('portfolio_index') }}">back to list</a>
-  </div>
-
-{% endblock %}
-
 
 {% block _portfolio_images_widget %}
   <p>Ajoutez vos images</p>
@@ -45,5 +30,3 @@
   </div>
 
 {% endblock %}
-
-
