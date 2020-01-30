@@ -5,6 +5,7 @@
   use App\Entity\User;
   use App\Service\StatsService;
   use Doctrine\Common\Persistence\ObjectManager;
+  use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
   use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
   use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
   use Symfony\Component\Routing\Annotation\Route;
@@ -14,17 +15,18 @@
   {
     /**
      * @Route("/admin", name="admin_dashboard")
-     * @param ObjectManager $manager
-     * @param StatsService $statsService
-     * @Security("is_granted('ROLE_USER')")
      * @return Response
+     * @IsGranted("ROLE_USER")
      */
-    public function index(ObjectManager $manager, StatsService $statsService): Response
+    public function index(): Response
     {
-      $stats = $statsService->getStats();
+      $entityManager = $this->getDoctrine ()->getManager ();
+      $totalComp = $entityManager->createQuery('SELECT COUNT(c) FROM App\Entity\Competences c')->getSingleScalarResult();
+      $totalForm = $entityManager->createQuery('SELECT COUNT(f) FROM App\Entity\Formations f')->getSingleScalarResult();
+      $totalExp = $entityManager->createQuery('SELECT COUNT(e) FROM App\Entity\Experiences e')->getSingleScalarResult();
 
       return $this->render('admin/dashboard/index.html.twig', [
-        'stats' => $stats,
+        'stats' => compact ('totalComp', 'totalForm', 'totalExp')
 
       ]);
     }

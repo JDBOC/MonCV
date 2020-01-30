@@ -7,6 +7,7 @@ use App\Entity\User;
 use App\Form\AccountType;
 use App\Form\PasswordUpdateType;
 use App\Form\RegistrationType;
+use App\Service\StatsService;
 use Doctrine\Common\Persistence\ObjectManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,8 +29,12 @@ class AccountController extends AbstractController
     public function login(AuthenticationUtils $utils)
     {
       $error = $utils->getLastAuthenticationError ();
+      $username = $utils->getLastUsername ();
+
+
         return $this->render('account/login.html.twig', [
-          'hasError' => $error !== null
+          'hasError' => $error !== null,
+
         ]);
 
     }
@@ -44,6 +49,9 @@ class AccountController extends AbstractController
 
   /**
    * @Route("/register", name="account_register")
+   * @param Request $request
+   * @param ObjectManager $manager
+   * @param UserPasswordEncoderInterface $encoder
    * @return Response
    */
     public function register(Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder) {

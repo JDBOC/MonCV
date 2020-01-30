@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,9 +17,11 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class UserController extends AbstractController
 {
-    /**
-     * @Route("/", name="user_index", methods={"GET"})
-     */
+  /**
+   * @Route("/", name="user_index", methods={"GET"})
+   * @param UserRepository $userRepository
+   * @return Response
+   */
     public function index(UserRepository $userRepository): Response
     {
         return $this->render('user/index.html.twig', [
@@ -28,6 +31,7 @@ class UserController extends AbstractController
 
     /**
      * @Route("/new", name="user_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_USER")
      */
     public function new(Request $request): Response
     {
@@ -59,10 +63,13 @@ class UserController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}/edit", name="user_edit", methods={"GET","POST"})
-     * @Security("is_granted('ROLE_USER')")
-     */
+  /**
+   * @Route("/{id}/edit", name="user_edit", methods={"GET","POST"})
+   * @Security("is_granted('ROLE_USER')")
+   * @param Request $request
+   * @param User $user
+   * @return Response
+   */
     public function edit(Request $request, User $user): Response
     {
         $form = $this->createForm(UserType::class, $user);

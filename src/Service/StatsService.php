@@ -2,7 +2,11 @@
 
   namespace App\Service;
 
-  use Doctrine\Common\Persistence\ObjectManager;
+
+
+
+
+  use Doctrine\Persistence\ObjectManager;
 
   class StatsService {
 
